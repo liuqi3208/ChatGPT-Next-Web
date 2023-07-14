@@ -26,6 +26,8 @@ import {
 import { SideBar } from "./sidebar";
 import { useAppConfig } from "../store/config";
 import { AuthPage } from "./auth";
+import { LoginPage } from "./login";
+
 import { getClientConfig } from "../config/client";
 import { api } from "../client/api";
 
@@ -113,6 +115,8 @@ function Screen() {
   const location = useLocation();
   const isHome = location.pathname === Path.Home;
   const isAuth = location.pathname === Path.Auth;
+  const isLogin = location.pathname === Path.Login;
+
   const isMobileScreen = useMobileScreen();
 
   useEffect(() => {
@@ -130,14 +134,14 @@ function Screen() {
         } ${getLang() === "ar" ? styles["rtl-screen"] : ""}`
       }
     >
-      {isAuth ? (
+      {isLogin ? (
         <>
-          <AuthPage />
+          {/* <AuthPage /> */}
+          <LoginPage />
         </>
       ) : (
         <>
           <SideBar className={isHome ? styles["sidebar-show"] : ""} />
-
           <div className={styles["window-content"]} id={SlotID.AppBody}>
             <Routes>
               <Route path={Path.Home} element={<Chat />} />

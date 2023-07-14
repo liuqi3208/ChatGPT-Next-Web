@@ -6,7 +6,7 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in [auth](/#/auth) page.",
+      "Unauthorized access, please enter access code in [auth](/#/login) page.",
   },
   Auth: {
     Title: "Need Access Code",
@@ -14,6 +14,12 @@ const en: LocaleType = {
     Input: "access code",
     Confirm: "Confirm",
     Later: "Later",
+  },
+  Login: {
+    Title: "SINGIN",
+  },
+  Register: {
+    Title: "SINGUP",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,

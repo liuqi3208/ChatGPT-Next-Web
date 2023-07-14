@@ -21,7 +21,6 @@ export const metadata = {
     statusBarStyle: "default",
   },
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -32,7 +31,10 @@ export default function RootLayout({
       <head>
         <meta name="config" content={JSON.stringify(getClientConfig())} />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <link rel="stylesheet" href="/demo2.css"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
+        <script src="/vendors.js" defer></script>
+        <script src="/demo2.js" defer></script>
       </head>
       <body>{children}</body>
     </html>
